@@ -5,6 +5,9 @@ LABEL org.opencontainers.image.description="Docker image for mcpo (Model Context
 LABEL org.opencontainers.image.source="https://github.com/alephpiece/mcpo-docker"
 LABEL org.opencontainers.image.licenses="MIT"
 
+# Update pip
+RUN python -m pip install --upgrade pip
+
 # install npx
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
